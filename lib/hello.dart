@@ -14,4 +14,7 @@ class Hello {
     final String? version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+  static Future<void> jumpUrlByNative(String url) async {
+    await _channel.invokeMethod('jumpUrlByNative',url);
+  }
 }
